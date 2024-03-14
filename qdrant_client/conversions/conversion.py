@@ -2101,7 +2101,7 @@ class RestToGrpc:
         cls, model: rest.SnapshotDescription
     ) -> grpc.SnapshotDescription:
         timestamp = Timestamp()
-        timestamp.FromDatetime(datetime.fromisoformat(model.creation_time))
+        timestamp.FromDatetime(model.creation_time)
         return grpc.SnapshotDescription(
             name=model.name,
             creation_time=timestamp,
