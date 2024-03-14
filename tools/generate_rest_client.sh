@@ -6,7 +6,7 @@ PROJECT_ROOT="$(pwd)/$(dirname "$0")/../"
 
 cd $(mktemp -d)
 
-git clone --sparse --filter=blob:none --depth=1 https://github.com/qdrant/qdrant
+git clone -b chrono-latest --sparse --filter=blob:none --depth=1 https://github.com/qdrant/qdrant
 cd qdrant
 git sparse-checkout add docs/redoc/master
 

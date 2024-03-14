@@ -1827,7 +1827,7 @@ class ShardingMethod(str, Enum):
 
 class SnapshotDescription(BaseModel):
     name: str = Field(..., description="")
-    creation_time: Optional[str] = Field(default=None, description="")
+    creation_time: Optional[datetime] = Field(default=None, description="")
     size: int = Field(..., description="")
     checksum: Optional[str] = Field(default=None, description="")
 
