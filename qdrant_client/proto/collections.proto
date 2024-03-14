@@ -482,7 +482,7 @@ message ShardTransferInfo {
 }
 
 message CollectionClusterInfoResponse {
-  uint64 peer_id = 1;  // ID of this peer
+  uint64 peer_id = 1;  // ID of this peer 
   uint64 shard_count = 2; // Total number of shards
   repeated LocalShardInfo local_shards = 3; // Local shards
   repeated RemoteShardInfo remote_shards = 4; // Remote shards

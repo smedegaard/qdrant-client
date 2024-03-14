@@ -6,7 +6,7 @@ PROJECT_ROOT="$(pwd)/$(dirname "$0")/../"
 
 cd $(mktemp -d)
 
-git clone --sparse --filter=blob:none --depth=1 git@github.com:qdrant/qdrant.git
+git clone --sparse --filter=blob:none --depth=1 https://github.com/qdrant/qdrant
 cd qdrant
 git sparse-checkout add docs/redoc/master
 
@@ -14,7 +14,7 @@ OPENAPI_PATH="$(pwd)/docs/redoc/master/openapi.json"
 
 cd $(mktemp -d)
 
-git clone git@github.com:qdrant/pydantic_openapi_v3.git
+git clone https://github.com/qdrant/pydantic_openapi_v3
 cd pydantic_openapi_v3
 
 poetry install
